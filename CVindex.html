@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About me</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="mystyle.css">
+        <link rel="icon" href="../images/icon.ico" type="image/x-icon"/>
+    </head>
+</html>
+<body style="background-color:rgb(255, 237, 194)">
+<!--圖片(絕對路徑)-->   
+<img src="https://i1.wp.com/blog.kkday.com/wp-content/uploads/batch_shutterstock_1456201040.jpg?w=1080&quality=80&strip=all&ssl=1" width="100%" height="500px" style="opacity: 0.85">
+    <nav><!--nav左側欄位的區塊-->
+        
+        <!--照片(相對路徑)-->
+        <img class="style1" src="./142243.jpg" ><!--長寬設定及觸發變大-->
+        <!--unordered list-->
+        <ul>
+            <!--h1-->
+            <h1 class="line1">陳俐吟</h1><!--line1字型設定-->
+                <!--h2-->
+                <h2>每個人都有流浪的基因繼續向未知挑戰</h2>
+                <!--hr-->
+                <hr color="brown" >
+                <!--br-->
+                <br>
+                <!--h4-->
+                <h4>社交檔案</h4>
+                <!--list-->
+                <!--觸發連結會變色-->
+                <li ><a href="https://www.youtube.com/channel/UCU6LDt5uxgc4vSoDtPLXPzg" target ="_blank">Youtube</a></li>
+                <li><a href="https://www.instagram.com/taiwanese_dog/" target="blank">IG</li></a>
+                <li><a href="https://www.facebook.com/profile.php?id=100003361633901" target="blank">FB</li></a>
+                <br>
+            
+        </ul>
+    </nav>
+    <section><!--section中間內文的介紹，觸發變顏色-->
+        <h1>自我介紹</h1>
+        <!--p-->
+        <p>南投的小孩，在山巒的包圍下長大，目前就讀中央大學資訊管理學系 ，勇於挑戰新的事物，在自己力所能及的情況下，會把事情做到最好，興趣就是運動
+            最喜歡的是排球，
+            高中三年幾乎都在打，
+            然後現在是系羽的成員，
+            最好的戰機就是北資盃我們拿了冠軍，
+            但我出場的次數才兩次，
+            不得說隊友們都太給力了。</p>
+
+    </section>
+    <br>
+    <section>
+        <h1>興趣</h1>
+        <ul class="interesting">
+            <li><img class="icon" src="../images/noun-ball-1070923.png"> 球類運動</li>
+            <li><img class="icon" src="../images/noun-camera-4875855.png">攝影</li>
+            <li><img class="icon" src="../images/noun-food-1351018.png">美食</li>
+            <li><img class="icon" src="../images/noun-beautiful-woman-3531282.png">當網美</li>
+            <li><img class="icon" src="../images/noun-hiking-3315692.png">戶外運動</li>
+
+        </ul>
+    </section>
+    <br>
+    <section>
+        <h1>活動紀錄</h1>
+        <center>
+        <!--iframe-->    
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-XtYpzR9Y64" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </center>
+    </section>
+    <br>
+    <section>
+        <hr color="brown">
+        <h1>猜猜我幾歲</h1>
+        <p>最多猜5次喔</p>
+        <input id="old" type="number">
+        <!--button-->
+        <button onclick="myFunction()">submit</button>
+        <br>
+        <p id="demo"></p>
+        <script>
+            const realage=20;
+            const maxround=5;
+            let round=1;
+            let success=false;
+
+            function myFunction(){
+                let input=document.getElementById("old").value;
+                let text;
+
+                if(input==realage)
+                    text="太會猜了吧 好暈喔";
+                else if(round>maxround)
+                    text="我20歲啦!!!";
+                    else{
+                        if(input>realage){
+                            text='Round'+round+'/'+maxround+':我才沒那麼老';
+                        }
+                        if(input<realage){
+                            text='Round'+round+'/'+maxround+':沒想到我那麼幼齒';
+                        }
+                        round+=1;
+                    }
+                    document.getElementById("demo").innerHTML=text;
+
+            }
+        </script>
+    </section>
+    
+    <footer>
+       <center>
+        <!--table-->   
+        <table  width="80%" >
+            <caption  ><b>聯絡資訊</b></caption>
+        <tr>
+            <th>電話</th>
+            <th>住址</th>
+        </tr>
+        <tr>
+            <td>090909099</td>
+            <td>桃園市中壢區中大路300號</td>
+        </tr>
+        </table>
+        <script>
+            function myFunction(){
+                document.getElementById('datetime').innerHTML=Date();
+            }
+            
+        </script>
+
+
+        <p id="datetime"></p>
+        <button style="color:brown" type="button" onclick="myFunction()">都這個時間了</button>
+        
+        </center>
+    </footer>
+</body>
